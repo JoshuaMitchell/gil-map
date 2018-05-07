@@ -1,0 +1,467 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name='google-site-verification' content='' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="description" content="Andrew Gillum for Governor">
+<meta name="keywords" content="Andrew Gillum for Governor">
+<meta property="og:image" content="https://images.contentful.com/lmv393tb6u8n/Qs8FaQ3NQWkAcW2Gyawuk/3867a6457533dbb1e9deaa91db8c95bd/gil-agsp-social.jpg" />
+<meta property="og:url" content="https://map.andrewgillum.com" />
+<meta property="og:title" content="Events for Andrew Gillum for Florida Governor"/>
+<meta property="og:description" content="Join Andrew Gillum to help transform Florida into a state that works for all of us "/>
+
+
+<link rel="canonical" href="https://map.andrewgillum.com|">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="https://map.andrewgillum.com">
+<meta property="twitter:site:id" content="465046121">
+<meta property="twitter:author" content="AndrewGillum">
+<meta property="twitter:description" content="Join me at an event to elect Andrew Gillum the next Governor of Florida">
+<meta property="twitter:title" content="Events for Andrew Gillum for Florida Governor">
+<meta property="twitter:image" content="https://images.contentful.com/lmv393tb6u8n/Qs8FaQ3NQWkAcW2Gyawuk/3867a6457533dbb1e9deaa91db8c95bd/gil-agsp-social.jpg">
+
+<link href='//api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="./css/events-map.css">
+<link href="https://fonts.googleapis.com/css?family=Cormorant|Open+Sans:400,600" rel="stylesheet">
+<title>Events for Andrew Gillum for Florida Governor</title>
+
+<!--[if lte IE 9]>
+       <meta http-equiv="refresh" content="0; url=https://go.chrismurphy.com/page/event/search_simple" />
+<![endif]-->
+<body class='list-view initial-view'>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1682756452019911";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<section id='header'>
+<div id="header" class='primary_font'>
+
+  <div class="main-title-area">
+    <div style="margin-bottom: 4px;">
+      <div id='spiel'>
+        <a style="display: inline-block; width: 100%; height: 100%" href='//andrewgillum.com'></a>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <ul id="nav" class='nav'>
+      <li>
+        <a class="twitter-share-button"
+          data-url="https://map.andrewgillum.com"
+          href="Join me at an event to elect Andrew Gillum the next Governor of Florida">
+          Tweet</a>
+      </li>
+      <li>
+        <div class="fb-share-button" data-href="http://map.andrewgillum.com" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://map.andrewgillum.com&amp;src=sdkpreparse">Share</a></div>
+      </li>
+      <li><a href="https://go.andrewgillum.com/page/event/create" class="contribute" target="_blank">Host an Event</a></li>
+    </ul>
+  </nav>
+  <div style="clear: both"></div>
+</div>
+</section>
+<section id='activity-area' class='clearfix'>
+  <article id='events'>
+    <div id='filters'>
+      <div id='loading-icon' class='primary_font'>Loading...</div>
+      <h3 id='switch-link'>
+          <a href='javascript: void(null)' onclick='window.mapManager.toMapView()' id='to-map-view'>
+            <span>List View</span>
+            <img src='/img/icon/list-icon.png' width='28px'/>
+          </a>
+          <a href='javascript: void(null)' onclick='window.mapManager.toListView()' id='to-list-view'>
+            <span>Map View</span>
+            <img src='/img/icon/map-icon.png' width='28px'/>
+          </a>
+      </h3>
+      <h4 class='primary_font title'>
+        <span id='screen-title'>Filters</span>
+        <a href="//andrewgillum.com"><span id='mobile-title'></span></a>
+      </h4>
+      <form id='filter-form'>
+        <table>
+          <tr>
+            <td>
+              <h5 class='primary_font'>By Zipcode</h5>
+              <input type='number' name='zipcode' maxlength='5' placeholder='ZIPCODE' onclick="this.select();" >
+            </td>
+            <td>
+              <h5 class='primary_font'>Distance</h5>
+              <select name='distance'>
+                <option value='5'>5mi</option>
+                <option value='20'>20mi</option>
+                <option value='50' selected='selected'>50mi</option>
+                <option value='100'>100mi</option>
+              </select>
+            </td>
+            <td>
+              <h5 class='primary_font'>Sort By</h5>
+              <select name='sort'>
+                <option value='time' selected='selected'>Time</option>
+                <option value='distance'>Distance</option>
+              </select>
+              <input type='button' style='position: absolute; z-index: -1; opacity: 0;' id='hidden-button'/>
+            </td>
+          </tr>
+        </table>
+        <div id='filter-popup-area' class='primary_font'>
+          <a href='javascript: void(null)' class='filter-button show-filter' onclick='$("#events").addClass("show-type-filter");'>
+            Search by Type
+          </a>
+          <div id='filter-list-area'>
+            <h5>Search by Type</h5>
+            <div id='f-container'>
+              <div id='filter-list-container'>
+                <ul id='filter-list'></ul>
+              </div>
+              <div style='text-align: center; font-size: 11px; margin-top: 10px; color: lightgray;'>
+              <a href='javascript: void(null)' id='show-all'
+                 onclick='$("#filter-list").find("input[type=checkbox]").prop("checked", true).trigger("change");'>Show All</a> &bull;
+              <a href='javascript: void(null)'
+                 onclick='$("#filter-list").find("input[type=checkbox]").prop("checked", false).trigger("change")'>Hide All</a>
+              </div>
+            </div>
+            <p align='right'>
+              <a href='javascript: void(null)' class='filter-button'
+                 onclick='$("#events").removeClass("show-type-filter");'>
+                Hide Legend
+              </a>
+            </p>
+          </div>
+        </div>
+        <nav id='mobile-nav'>
+          <a href="https://go.andrewgillum.com/page/event/create" class="contribute" target="_blank"><img src='https://d80vmbqb0w49q.cloudfront.net/img/icon/add-icon.png' width='28px'/></a>
+        </nav>
+      </form>
+    </div>
+    <div id='event-list-container'>
+      <ul id='event-list'>
+        <li class='primary_font' id='init-item'>
+          <span>Find an event near you!<br/><br/>Type in your <strong>zipcode</strong> to view nearby meetings and events.</span>
+        </li></ul>
+      <footer>
+        <div id='footer-area' >
+          <h3 class='secondary_font'>Friends of Andrew Gillum, Democrat, for Governor </h3>
+          <p class='secondary_font'>1550 Melvin Street<br/>
+Tallahassee, FL 32303<br/>
+
+(850) 583-6637<br/>
+Email: <a href='mailto:info@andrewgillum.com'>info@andrewgillum.com</a>
+</p>
+          <br/><br/>
+          <sub><a href='https://gillum.bsd.net/page/content/privacy/'>Privacy Policy</a></sub>
+        </div>
+
+        <p class="paidfor">PAID BY ANDREW GILLUM, DEMOCRAT, FOR GOVERNOR</p>
+
+      </footer>
+    </div>
+  </article>
+  <article id='map'>
+    <div id='map-container'></div>
+  </article>
+</section>
+<section id='campaign-offices'>
+  <div class='viewport'>
+    <h3 class='title'>Nearby Campaign Offices</h3>
+    <a class='close-button primary_font' href='javascript: void(null);' onclick='$("body").removeClass("show-office")'>x</a>
+    <div class='container'>
+      <ul id='campaign-office-list'></ul>
+    </div>
+  </div>
+</section>
+
+<script src="https://d2zfgjd0dxweyq.cloudfront.net/js/jquery.gz"></script>
+<script src='https://d2zfgjd0dxweyq.cloudfront.net/js/d3.gz' type='text/javascript'></script>
+<script id='zipcodes-datadump' type='text/plain'></script>
+<script src='https://d2zfgjd0dxweyq.cloudfront.net/js/deparam.min.gz'></script>
+<script src='https://d2zfgjd0dxweyq.cloudfront.net/js/mapbox.gz'></script>
+<!-- <script src='/js/leaflet-bouncer.js'></script> -->
+<script src='https://d2zfgjd0dxweyq.cloudfront.net/js/moment.min.js'></script>
+<script src='https://d2zfgjd0dxweyq.cloudfront.net/js/js-cookie.js'></script>
+<script src='https://d80vmbqb0w49q.cloudfront.net/js/MapManagerTranspiled.js'></script>
+<script type='text/javascript'>
+window.eventTypeFilters = [
+  // {
+  //   name: 'Campaign Office',
+  //   id: 'campaign-office',
+  //   onItem: "<img style='width: 14px; height: 14px;' src='/img/icon/star.png' />",
+  //   offItem: "<img style='width: 14px; height: 14px;' src='/img/icon/star-gray.png' />"
+  // }
+  {
+    name: 'Volunteer in the Field',
+    id: 'volunteer-in-the-field'
+  },
+  {
+    name: 'House Party',
+    id: 'house-party'
+  },
+  {
+    name: 'Rally',
+    id: 'rally'
+  },
+  {
+    name: 'Text Message Fundraiser',
+    id: 'text-message-fundraiser'
+  },
+  {
+    name: "April 10 Live Event Watch Party",
+    id:'april-10-live-event-watch-party'
+  }
+];
+</script>
+<script type='text/javascript'>
+(function($, d3) {
+  var date = new Date();
+  $("#loading-icon").show();
+
+  $.ajax({
+    url: 'https://dnb6leangx6dc.cloudfront.net/output/andrewgillum.js.gz', //'|**DATA_SOURCE**|',
+    dataType: 'script',
+    cache: true, // otherwise will get fresh copy every page load
+    success: function(data) {
+      d3.csv('//d1y0otadi3knf6.cloudfront.net/d/us_postal_codes.gz',
+        function(zipcodes) {
+          $("#loading-icon").hide();
+          //Clean data
+          window.EVENTS_DATA.forEach(function(d) {
+            d.filters = [];
+            //Set filter info
+            switch (d.event_type) {
+              case "Volunteer in the Field":
+                d.filters.push('volunteer-in-the-field');
+                break;
+              case "Text Message Fundraiser":
+                d.filters.push('text-message-fundraiser');
+                break;
+              case "Rally":
+                d.filters.push('rally');
+                break;
+              case "House Party":
+                d.filters.push('house-party');
+                break;
+              case "April 10 Live Event Watch Party":
+                d.filters.push('april-10-live-event-watch-party');
+                break;
+              default:
+                d.filters.push('other');
+                break;
+            }
+
+            d.is_official = d.is_official == "1";
+            if (d.is_official) {
+              d.filters.push("official-event");
+            }
+          });
+          var params = $.deparam(window.location.hash.substring(1))
+          var oldDate = new Date();
+
+          /* Extract default lat lon */
+          var m = /.*\?c=(.+?),(.+?),(\d+)z#?.*/g.exec(window.location.href)
+          if (m && m[1] && m[2] && m[3]) {
+            var defaultCoord = {
+              center: [parseFloat(m[1]), parseFloat(m[2])],
+              zoom: parseInt(m[3])
+            };
+            window.mapManager = MapManager(window.EVENTS_DATA, campaignOffices, zipcodes, {
+              defaultCoord: defaultCoord
+            });
+
+            window.mapManager.filterByCoords(defaultCoord.center, 50, params.sort, params.f);
+          } else {
+            window.mapManager = MapManager(window.EVENTS_DATA, null, zipcodes);
+          }
+
+          // Load Connecticut area
+          var district_boundary = new L.geoJson(null, {
+            clickable: false
+          });
+          district_boundary.addTo(window.mapManager.getMap());
+
+          /*** TOTALLY OPTIONAL AREA FOR FOCUSED AREAS. EXAMPLE IS CONNETICUT ***/
+          /*** TODO: Repalace/Remove this ***/
+          $.ajax({
+            dataType: "json",
+            url: "d/florida.json",
+            success: function(data) {
+              console.log(data);
+              $(data.features[0].geometry).each(function(key, data) {
+                district_boundary
+                  .addData(data)
+                  .setStyle({
+                    fillColor: 'transparent',
+                    color: 'rgb(0, 134, 178)'
+                  });
+                if (!params.zipcode || params.zipcode === '') {
+                  window.mapManager.getMap()
+                    .fitBounds(district_boundary.getBounds(), { animate: false });
+                }
+              });
+
+            }
+          }).error(function() {});
+
+          if ($("input[name='zipcode']").val() == '' && Cookies.get('map.bernie.zipcode') && window.location.hash == '') {
+            $("input[name='zipcode']").val(Cookies.get('map.bernie.zipcode'));
+            window.location.hash = $("#filter-form").serialize();
+          } else {
+            $(window).trigger("hashchange");
+          }
+        });
+    }
+  });
+
+  /** initial loading before activating listeners...*/
+  var params = $.deparam(window.location.hash.substring(1));
+  if (params.zipcode) {
+    $("input[name='zipcode']").val(params.zipcode);
+  }
+
+  if (params.distance) {
+    $("select[name='distance']").val(params.distance);
+  }
+  if (params.sort) {
+    $("select[name='sort']").val(params.sort);
+  }
+
+  /* Prepare filters */
+  $("#filter-list").append(
+    window.eventTypeFilters.map(function(d) {
+      return $("<li />")
+        .append(
+          $("<input type='checkbox' class='filter-type' />")
+          .attr('name', 'f[]')
+          .attr("value", d.id)
+          .attr("id", d.id)
+          .prop("checked", !params.f ? true : $.inArray(d.id, params.f) >= 0)
+        )
+        .append($("<label />").attr('for', d.id)
+        .append($("<span />").addClass('filter-on')
+        .append(d.onItem ? d.onItem : $("<span>").addClass('circle-button default-on')))
+        .append($("<span />").addClass('filter-off')
+        .append(d.offItem ? d.offItem : $("<span>").addClass('circle-button default-off')))
+        .append($("<span>").text(d.name)));
+    })
+  );
+  /***
+   *  define events
+   */
+  //only numbers
+  $("input[name='zipcode']").on('keyup keydown', function(e) {
+    if (e.type == 'keydown' && (e.keyCode < 48 || e.keyCode > 57) &&
+      e.keyCode != 8 && !(e.keyCode >= 37 || e.keyCode <= 40)) {
+      return false;
+    }
+
+    if (e.type == 'keyup' && $(this).val().length == 5) {
+      if (!(e.keyCode >= 37 && e.keyCode <= 40)) {
+        $(this).closest("form#filter-form").submit();
+        $("#hidden-button").focus();
+      }
+    }
+  });
+
+  /***
+   *  onchange of select
+   */
+  $("select[name='distance'],select[name='sort']").on('change', function(e) {
+    $(this).closest("form#filter-form").submit();
+  });
+
+  /**
+   * On filter type change
+   */
+  $(".filter-type").on('change', function(e) {
+    $(this).closest("form#filter-form").submit();
+  })
+
+  //On submit
+  $("form#filter-form").on('submit', function(e) {
+    var serial = $(this).serialize();
+    window.location.hash = serial;
+    e.preventDefault();
+    return false;
+  });
+
+  $(window).on('hashchange', function(e) {
+
+    var hash = window.location.hash;
+    if (hash.length == 0 || hash.substring(1) == 0) {
+      $("#loading-icon").hide();
+      return false;
+    }
+
+    var params = $.deparam(hash.substring(1));
+
+    //Custom feature for specific default lat/lon
+    //lat=40.7415479&lon=-73.8239609&zoom=17
+    setTimeout(function() {
+      $("#loading-icon").show();
+
+      if (window.mapManager._options && window.mapManager._options.defaultCoord && params.zipcode.length != 5) {
+        window.mapManager.filterByType(params.f);
+        window.mapManager.filterByCoords(window.mapManager._options.defaultCoord.center, params.distance, params.sort, params.f);
+      } else {
+        window.mapManager.filterByType(params.f);
+        window.mapManager.filter(params.zipcode, params.distance, params.sort, params.f);
+      }
+      $("#loading-icon").hide();
+
+    }, 10);
+    // $("#loading-icon").hide();
+    if (params.zipcode.length == 5 && $("body").hasClass("initial-view")) {
+      $("#events").removeClass("show-type-filter");
+      $("body").removeClass("initial-view");
+    }
+  });
+
+  var pre = $.deparam(window.location.hash.substring(1));
+  if ($("body").hasClass("initial-view")) {
+    if ($(window).width() >= 600 && (!pre.zipcode || pre && pre.zipcode.length != 5)) {
+      $("#events").addClass("show-type-filter");
+    }
+  }
+
+})(jQuery, d3);
+
+</script>
+<!-- Twitter -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<!-- SOCIAL -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18936430-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script></script>
+
+
+</body>

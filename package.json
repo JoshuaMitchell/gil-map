@@ -1,0 +1,24 @@
+{
+  "name": "gpwes-files",
+  "version": "1.0.0",
+  "description": "s3 push",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpsimpact/gpwes-files.git"
+  },
+  "author": "joshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpsimpact/gpwes-files/issues"
+  },
+  "homepage": "https://github.com/gpsimpact/gpwes-files#readme",
+  "dependencies": {
+    "aws-sdk": "^2.49.0",
+    "grunt": "^1.0.1",
+    "grunt-exec": "^2.0.0"
+  }
+}

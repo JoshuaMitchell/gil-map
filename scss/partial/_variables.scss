@@ -1,0 +1,40 @@
+/** SHOW/HIDE "Search by Type"**/
+$show_search_by_type: block;
+
+/** LOGO **/
+$logo: url(/img/logo.svg);
+$logo_width: 152px;
+$logo_height: 60px;
+
+$mob_logo: url(/img/logo.svg);
+$mob_logo_width: 152px;
+$mob_logo_height: 60px;
+
+/** BUTTON COLORS **/
+$highlight_color: #C63530;
+$darkred: white;
+$highlight_transition: 0.4s background-color, 0.4s color;
+
+.highlight_hover {
+  background-color: white; // Hover
+  color: #25a9e0;
+}
+
+
+$secondary_color: #104366;
+$darkdarkblue: #33495A; //hover
+
+/** Background Colors **/
+$header-color: white; //rgb(225, 225, 225);
+
+$filterbg-color: #EBEBEB;
+$filterbg-border-color: #CCC;
+
+$eventsbg-color: white;
+$eventsbg-border-color: #DCDCDC;
+
+$gray: rgb(110, 110, 110);
+$lightgray: #e1e1e1;
+
+$serif: 'Cormorant', serif;
+$sans-serif: 'Open Sans', Helvetica, sans-serif;

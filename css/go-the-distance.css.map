@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iCAAiC;AAGjC,YAAY;AASZ,qBAAqB;AAKrB,gBAAiB;EACf,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,OAAO;;AAOhB,yBAAyB;ACvBzB,kDAAkD",
+"sources": ["../scss/partial/_variables.scss","../scss/go-the-distance.scss"],
+"names": [],
+"file": "go-the-distance.css"
+}
